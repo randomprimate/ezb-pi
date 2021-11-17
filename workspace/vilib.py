@@ -335,7 +335,7 @@ class Vilib(object):
         return 'none'
 
     @staticmethod
-    def qrcode_detect_object(obj_parameter):
+    def qrcode_detect_object(obj_parameter = 'data'):
         if obj_parameter == 'x':
             # print(Vilib.detect_obj_parameter['x'])          
             return int(Vilib.detect_obj_parameter['qr_x']/107.0)-1

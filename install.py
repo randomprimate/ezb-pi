@@ -87,12 +87,14 @@ def install():
         cmd='Config().set("dtoverlay=lirc-rpi:gpio_in_pin", "26")')
     do(msg="turn on Uart",
         cmd='Config().set("enable_uart", "1")')
-    do(msg="set gpu memory to 128",
-        cmd='Config().set("gpu_mem", "128")')
+    do(msg="set gpu memory to 256",
+        cmd='Config().set("gpu_mem", "256")')
     do(msg="enable camera",
         cmd='Config().set("start_x", "1")')
     do(msg="turn off serial terminal",
         cmd='Cmdline().remove("console=serial0")')
+    # do(msg="setup i2s",
+    #     cmd='run_command("sudo bash /home/pi/ezb-pi/bin/i2samp.sh")')
 
     print("Setup ezblock service")
     do(msg="copy ezblock file",
